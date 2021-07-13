@@ -21,7 +21,7 @@ dataRestaurants.restaurants.forEach((restaurant) => {
             <div class="content">
                 <h4>Rating ${restaurant.rating}</h4>
                 <h5>${restaurant.name}</h5>
-                <p>${restaurant.description}</p>
+                <p>${restaurant.description.substr(0, 100)}...</p>
             </div>
         </div>
     `;
