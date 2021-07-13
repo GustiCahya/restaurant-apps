@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+/* header */
+header nav{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background: rgb(156, 117, 125);
+    color: white;
+    border-bottom: 1px solid rgb(161, 131, 137);
+}
+header nav h1 a{
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    transition: .1s color;
+}
+header nav h1 a:hover{
+    color: rgb(255, 199, 199);
+}
+header nav .main_nav{
+    list-style-type: none;
+    display: none;
+    transition: 0.1s;
+}
+header nav .main_nav li a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: inherit;
+}
+header nav .main_nav li a:hover{
+    color: rgb(255, 199, 199);
+}
+header nav .burger_bar{
+    font-size: 30px;
+    color: inherit;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: .1s filter;
+}
+header nav .burger_bar:hover{
+    filter: brightness(95%);
+}
+header .drop_nav{
+    z-index: 1;
+    position: fixed;
+    top: 81px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+header .show{
+    display: block;
+}
+header .drop_nav li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: rgb(145, 106, 115);
+    border-bottom: 1px solid rgb(161, 131, 137);
+    transition: .1 background-color;
+}
+header .drop_nav li a:hover{
+    background-color: rgb(136, 98, 106);
+}
+@media only screen and (min-width: 800px) {
+    header nav{
+        padding: 20px 60px;
+    }
+    header nav .main_nav{
+        display: flex;
+    }
+    header nav .burger_bar{
+        display: none;
+    }
+}
+
+/* main */
+main .hero{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url("../public/images/heros/hero-image_2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .hero h2{
+    letter-spacing: 1px;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+main .hero p{
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+@media only screen and (min-width: 1200px) {
+    main .hero{
+        min-width: 1000px;
+    }
+}
+
+main .explore{
+    padding: 60px 20px;
+    padding-bottom: 60px;
+}
+main .explore h3{
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+main .explore .restaurants{
+    display: flex;
+    flex-direction: column;
+}
+main .explore .restaurants .restaurant{
+    position: relative;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+main .explore .restaurants .restaurant .thumbnail .place{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    border: 1px solid black;
+    border-left: none;
+    background-color: white;
+    padding: 10px 10px;
+}
+main .explore .restaurants .restaurant .thumbnail .image{
+    width: 100%;
+}
+main .explore .restaurants .restaurant .content{
+    padding: 15px 10px;
+}
+main .explore .restaurants .restaurant .content h4{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+main .explore .restaurants .restaurant .content h5{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+main .explore .restaurants .restaurant .content p{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+@media only screen and (min-width: 800px) {
+    main .explore .restaurants{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        align-items: center;
+    }
+}
+
+/* footer */
+footer{
+    font-size: 13px;
+    padding: 20px 20px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
